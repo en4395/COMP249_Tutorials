@@ -3,7 +3,6 @@ package People;
 import java.time.Year;
 
 public class Student extends Person{
-    private String name;
     private String major;
     private int graduationYear;
 

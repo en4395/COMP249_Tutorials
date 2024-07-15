@@ -1,7 +1,6 @@
 package People;
 
 public class Baby extends Person {
-    private String name;
     private float ageInMonths;
 
     public Baby(float ageInMonths) {
