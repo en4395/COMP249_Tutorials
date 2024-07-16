@@ -45,6 +45,6 @@ public class Main {
         babyPerson.sayHello();
 
         // Now that babyPerson is all grown up, can they still cry like a Baby?
-        //((Baby) babyPerson).cry();
+        ((Baby) babyPerson).cry();
     }
 }
