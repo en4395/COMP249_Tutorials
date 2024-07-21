@@ -12,25 +12,21 @@ public class BagOfDice {
         */
 
         // Six-sided dice
-        DiceRoller d6 = new DiceRoller() {
+        DiceRoller d6 = new DiceRoller(DiceRoller.DiceShape.CUBE) {
             @Override
             public void rollDice() {
-                System.out.println("You rolled a " + (random.nextInt(5) + 1) + " on the d6.");
+                System.out.println("You rolled a " + (random.nextInt(numberOfFaces - 1) + 1) + " on the D6.");
             }
         };
         d6.rollDice();
 
         // Twenty-sided dice!
-        DiceRoller icosahedron = new DiceRoller() {
+        DiceRoller icosahedron = new DiceRoller(DiceRoller.DiceShape.ICOSAHEDRON) {
             @Override
             public void rollDice() {
-                System.out.println("You rolled a " + (random.nextInt(19) + 1) + " on the icosahedron.");
+                System.out.println("You rolled a " + (random.nextInt(numberOfFaces - 1) + 1) + " on the icosahedron.");
             }
         };
         icosahedron.rollDice();
-    }
-
-    public abstract class DiceRoller {
-        public abstract void rollDice();
     }
 }
