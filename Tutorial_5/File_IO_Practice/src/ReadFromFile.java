@@ -44,6 +44,17 @@ public class ReadFromFile {
         } catch(FileNotFoundException fileNotFoundException) {
             fileNotFoundException.printStackTrace();
         }
+
+        try {
+            BufferedReader fileReader = new BufferedReader(new FileReader(myFile));
+            int nextByte;
+
+            while((nextByte = fileReader.read()) != -1) {
+
+            }
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void readFirstLineOfFile(File file) throws FileNotFoundException {
