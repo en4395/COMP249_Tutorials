@@ -1,10 +1,11 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Scanner;
 
-public class DiaryEntry {
+public class DiaryEntry implements Serializable {
     private Date date;
     private int moodScore;
     private String diaryEntry;
