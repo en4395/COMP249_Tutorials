@@ -8,6 +8,7 @@ public class Main {
         Product tamari = new Product("Tamari", 10.89, 20);
 
         GroceryStore ellasShop = new GroceryStore("Ella's Shop", "src/GroceryStore/EllasShop.txt");
+
         ellasShop.addProduct(cheese);
         ellasShop.addProduct(lettuce);
         ellasShop.addProduct(tamari);

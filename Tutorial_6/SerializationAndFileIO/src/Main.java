@@ -4,6 +4,13 @@ public class Main {
     public static void main(String[] args) {
         Student student = new Student("Computer Science", 2028);
 
+        try(FileOutputStream fos = new FileOutputStream("src/Students.txt")) {
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+        } catch(IOException e) {
+
+            System.out.println("Encountered an IO exception");
+        }
+
         try {
             // Serializing 'student'
             // Create a file output stream
