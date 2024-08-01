@@ -4,10 +4,12 @@ public class Main {
     public static void main(String[] args)
     {
         int numToWrite = 254;
+        char charToWrite = 'a';
 
         try {
             // Writing to binary file
             OutputStream Stream = new FileOutputStream("src/myFile.bin");
+            Stream.write(charToWrite);
             Stream.write(numToWrite);
             Stream.close();
         } catch (IOException e) {
@@ -22,6 +24,7 @@ public class Main {
              * represented as a character in the text file.
              * */
             BufferedWriter fileWriter = new BufferedWriter(new FileWriter("src/myFile.txt"));
+            fileWriter.write(charToWrite);
             fileWriter.write(Integer.toString(numToWrite));
             fileWriter.close();
         } catch (IOException e) {
