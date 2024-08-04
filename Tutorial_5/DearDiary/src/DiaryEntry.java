@@ -1,11 +1,10 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.Date;
 import java.util.Scanner;
 
-public class DiaryEntry implements Serializable {
+public class DiaryEntry {
     private Date date;
     private int moodScore;
     private String diaryEntry;
@@ -45,9 +44,6 @@ public class DiaryEntry implements Serializable {
     }
 
     private void writeToDiary(File diary) throws IOException {
-        File myFile = new File("src/");
-        myFile.createNewFile();
-
         FileWriter fileWriter = new FileWriter(diary, true);
         fileWriter.write("DATE: " + date.toString() +
                 "\nMOOD SCORE: " + moodScore  + "/10" +
