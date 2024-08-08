@@ -3,20 +3,18 @@ import java.util.LinkedList;
 public class Album {
     private String albumName;
     private String artistName;
-    private int numberofTracks;
     private LinkedList<Song> songs;
     private int yearReleased;
 
-    public Album(String albumName, int numberofTracks, int yearReleased) {
+    public Album(String albumName, int numberOfTracks, int yearReleased) {
         this.albumName = albumName;
-        this.numberofTracks = numberofTracks;
         this.yearReleased = yearReleased;
 
         artistName = Song.generateRandomArtistName();
 
         songs = new LinkedList<>();
         String songName;
-        for(int i = 0; i < numberofTracks; i++) {
+        for(int i = 0; i < numberOfTracks; i++) {
             songName = Song.generateRandomSongName();
             songs.add(new Song(songName, artistName));
         }
